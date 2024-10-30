@@ -18,10 +18,23 @@
 
 - Las funciones deben tener UNA ÚNICA responsabilidad, Es mejor tener 5 funciones con 2 líneas cada una que tener una sola función que se encargue de 5 tareas distintas. */
 
-const generatePassword = code => {
-  const generate = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567890!@#$%^&*()_+-={}[]:;<>,.?';
+const generatePassword = document.getElementById('password')
+const passwordButton = document.getElementById("password-click")
+const rangePassword = document.getElementById("range")
 
-  for (i = 0; i < generate.length; i++) {
-    generate.Math.floor(Math.random() * generate.length);
+
+const textGenerate = () => {
+  const generate = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567890!@#$%^&*()_+-={}[]:;<>,.?';
+  let passwordWeb = ''
+
+  for (i = 0; i < rangePassword.value; i++) {
+    passwordWeb+= generate.charAt(Math.floor(Math.random() * generate.length));
   }
+  generatePassword.value = passwordWeb
 };
+
+
+
+generatePassword.addEventListener('click', textGenerate)
+passwordButton.addEventListener('click', textGenerate)
+rangePassword.addEventListener('click', textGenerate)

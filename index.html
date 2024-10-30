@@ -7,15 +7,18 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <p id="generatePassword"></p>
-    </div>
-    <div>
-      <p>LENGTH: 4</p>
-    </div>
-    <input id="range" type="range" min="4" max="32" step="1" />
-    <div>
-      <p>Generate Password</p>
+    <div class="generator-password">
+      <input id="password" class="password" type="text" />
+      <div>
+        <p class="length-range">LENGTH:</p>
+        <p id="numberMaxMin"></p>
+      </div>
+      <div>
+        <p>4</p>
+        <input id="range" type="range" min="4" max="32" step="1" />
+        <p>32</p>
+      </div>
+      <button id="password-click">Generate Password</button>
     </div>
     <script src="./js/scripts.js"></script>
   </body>
