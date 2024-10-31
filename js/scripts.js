@@ -18,7 +18,34 @@
 
 - Las funciones deben tener UNA ÚNICA responsabilidad, Es mejor tener 5 funciones con 2 líneas cada una que tener una sola función que se encargue de 5 tareas distintas. */
 
-const generatePassword = document.getElementById('password')
+
+const textPasswordElement = document.getElementById("textPassword")
+const numbersElement = document.getElementById("numbers")
+const rangeElement = document.getElementById("range")
+const generatePasswordElement = document.getElementById("generate-password")
+const generate = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567890!@#$%^&*()_+-={}[]:;<>,.?/"
+
+const generatePassword = () => {
+  let textContent = ""
+
+  for ( let i = 0; i < rangeElement.value; i++){
+    textContent += generate.charAt(Math.floor(Math.random() * generate.length))
+  }
+  textPasswordElement.value = textContent
+}
+
+
+const changeLengthText = () => {
+  numbersElement.textContent = rangeElement.value
+}
+
+generatePasswordElement.addEventListener("click", generatePassword)
+rangeElement.addEventListener("input", changeLengthText)
+
+
+
+
+/* const generatePassword = document.getElementById('password')
 const passwordButton = document.getElementById("password-click")
 const rangePassword = document.getElementById("range")
 const lengthRange = document.getElementById("length-range")
@@ -39,4 +66,4 @@ passwordButton.addEventListener('click', textGenerate)
 const rangeLength = () => {
   lengthRange.textContent = rangePassword.value
 }
-rangePassword.addEventListener('input', rangeLength)
+rangePassword.addEventListener('input', rangeLength) */

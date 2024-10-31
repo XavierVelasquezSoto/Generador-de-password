@@ -30,41 +30,71 @@ body {
   color: white;
 }
 
-.genera-password{
+
+.container-password{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
-  
+  padding-top: 500px;
 
 }
 
-.password{
+.textPassword{
+  width: 428px;
+  height: 60px;
+  background-color: #241442;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.container-numberLength{
+  display: flex;
+  padding-right: 320px;
+  text-align: left;
+  margin: 0;
+}
+
+.numbers{
+  padding-left: 15px;
+}
+
+.container-range{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #241442;
   width: 428px;
   height: 60px;
+  border-radius: 10px;
+}
+
+.line{
+  width: 310px;
+  height: 3px;
+  margin-left: 20px;
+  margin-right: 30px;
+  background-color: #7400e4;
+  accent-color: #7400e4;
+}
+
+.generate-password{
+  width: 428px;
+  height: 57px;
+  border-radius: 10px;
+  background-color: #a200d4;
+  margin-top: 20px;
   color: inherit;
-  text-align:center;
-  border-color: #241442;
-  border-radius: 10px;
-  
+  padding-top: 10px;
+  text-align: center;
+  font-size: 20px;
 }
+/* 
 
-.length-box{
-  display: flex;
-}
-.length-range{
-  padding-left: 10px;
-}
 
-.input-range{
-  display: flex;
-  background-color: #241442;
-  width: 428px;
-  height: 60px;
-  border-radius: 10px;
 
-}
+
 
 .input-range{
   padding-top: 10px;
@@ -89,4 +119,4 @@ body {
   background-color: #a200d4;
   margin-top: 20px;
   color: inherit;
-}
+} */
