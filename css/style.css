@@ -50,6 +50,13 @@ body {
   
 }
 
+.length-box{
+  display: flex;
+}
+.length-range{
+  padding-left: 10px;
+}
+
 .input-range{
   display: flex;
   background-color: #241442;

@@ -21,6 +21,7 @@
 const generatePassword = document.getElementById('password')
 const passwordButton = document.getElementById("password-click")
 const rangePassword = document.getElementById("range")
+const lengthRange = document.getElementById("length-range")
 
 
 const textGenerate = () => {
@@ -28,13 +29,14 @@ const textGenerate = () => {
   let passwordWeb = ''
 
   for (i = 0; i < rangePassword.value; i++) {
-    passwordWeb+= generate.charAt(Math.floor(Math.random() * generate.length));
+    passwordWeb += generate.charAt(Math.floor(Math.random() * generate.length));
+   
   }
-  generatePassword.value = passwordWeb
+  generatePassword.value = passwordWeb 
 };
-
-
-
-generatePassword.addEventListener('click', textGenerate)
 passwordButton.addEventListener('click', textGenerate)
-rangePassword.addEventListener('click', textGenerate)
+
+const rangeLength = () => {
+  lengthRange.textContent = rangePassword.value
+}
+rangePassword.addEventListener('input', rangeLength)
