@@ -67,11 +67,11 @@ body {
 }
 
 .line{
-  display: flex;
   width: 310px;
   height: 3px;
   margin-left: 30px;
   margin-right: 30px;
+  background-color: #7400e4;
 
 }
 
@@ -81,4 +81,5 @@ body {
   border-radius: 10px;
   background-color: #a200d4;
   margin-top: 20px;
+  color: inherit;
 }
